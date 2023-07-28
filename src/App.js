@@ -1,11 +1,14 @@
 // import { Helmet } from 'react-helmet';
 import './App.css';
-import React, {useState, useEffect} from 'react'
+import FetchData from './FetchData';
+
 
 function App() {
   return (
       <div className="App">
       <kbd className='App_title'>EventSpark</kbd>
+
+      <FetchData />
       <div className='meta'>
         <kbd>&copy; 2023</kbd>
         <br />
