@@ -1,7 +1,6 @@
-import React, { useEffect} from 'react'
+import React, { useEffect } from 'react'
 
 function FetchData() {
-    // const [events, setEvents] = useState([])
 
     useEffect(() => {
         fetch('https://eventspark-api-service.onrender.com/api/v1/event')
