@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <kbd className='App_title'>EventSpark</kbd>
+      <div className='meta'>
+        <kbd>&copy; 2023</kbd>
+        <br />
+        <kbd>Preliminary application deployment.</kbd>
+        <br />
+        <kbd>ALX software engineering programme.</kbd>
+        <br />
+        <kbd>Veronica Wambui Wanjiku.</kbd>
+      </div>
     </div>
   );
 }
