@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 function FetchData() {
 
     useEffect(() => {
-        fetch('https://eventspark-api-service.onrender.com/api/v1/event')
+        fetch('api/v1/event')
         .then(response => response.json())
         .then(data => console.log(data)
             )
