@@ -12,7 +12,7 @@ function App() {
       <div className='meta'>
         <kbd>&copy; 2023</kbd>
         <br />
-        <kbd>Preliminary application deployment.</kbd>
+        <kbd>Preliminary application deployment. Final portfolio project draft.</kbd>
         <br />
         <kbd>ALX software engineering programme.</kbd>
         <br />
