@@ -4,6 +4,350 @@
   box-sizing: border-box;
 }
 
-.meta {
-   margin-top: 20px;
+.navbar {
+  /* outline: 1px solid red; */
+  display: flex;
+  height: 120px;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin-bottom: 20px;
+  /* height: 300px;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin-bottom: 10px; */
+}
+
+.navbar__identity {
+  flex-basis: 85%;
+  display: flex;
+  flex-direction: column;
+}
+.navbar__logo {
+  /* outline: 1px solid red; */
+ list-style: none;
+ display: flex;
+}
+.header__logo {
+  /* margin-left: 20px; */
+  display: block;
+  height: 90px;
+  width: 100px;
+  /* outline: 1px solid red; */
+  position: absolute;
+}
+
+.stick {
+  display: block;
+  background-color: black;
+  width: 5px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.stick--one {
+    background-color: red;
+    margin-left: 40px;
+    rotate: 60deg;
+
+}
+
+.stick--two {
+  background-color: blue;
+  margin-left: 45px;
+  margin-top: -29px;
+  rotate: 90deg;
+}
+
+.stick--three {
+  background-color: gold;
+  margin-left: 40px;
+  margin-top: -29px;
+  rotate: 120deg;
+}
+
+.logo {
+  text-decoration: none;
+  margin-top: 100px;
+  margin-left: 15px;
+  color: black; 
+  position: relative;
+}
+
+.logo__reg {
+  position: absolute;
+}
+
+.input_search {
+  display: block;
+  outline: 1px solid red;
+  width: 800px;
+ 
+  border: none;
+  outline: 1px solid black;
+  padding: 5px 20px;
+  margin-bottom: 20px;
+
+}
+
+.eventList {
+  /* outline: 1px solid red; */
+  height: 800px;
+  padding: 30px;
+}
+
+
+
+.navbar__menu {
+  /* outline: 1px solid red; */
+  display: flex;
+  flex-basis: 15%;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.link {
+  /* outline: 1px solid red; */
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.link--login {
+  outline: 1px solid black;
+}
+
+.link:hover {
+  color: blue;
+}
+
+
+.loginForm, .registerForm {
+  padding-left: 20px;
+  /* outline: 1px solid red; */
+  width:600px;
+  height: 500px;
+}
+
+.eventForm {
+  width:600px;
+  /* outline: 1px solid red; */
+  height: 600px;
+  margin-left: 30px;
+}
+
+.eventForm > fieldset {
+  margin-bottom: 20px;
+}
+
+
+.username, .eventtitle {
+  margin-left: 3px;
+  width: 300px;
+  padding: 5px;
+  display: block;
+  outline: 1px solid black;
+  margin-bottom: 5px;
+}
+
+.description {
+  margin-left: 5px;
+  display: block;
+  width: 98%;
+  height: 150px;
+  outline: 1px solid black;
+  margin-bottom: 20px;
+}
+
+.password {
+  margin-left: 3px;
+  width: 300px;
+  padding: 5px;
+  display: block;
+  outline: 1px solid black;
+  margin-bottom: 20px;
+}
+
+.useremail, .title {
+  margin-left: 3px;
+  width: 300px;
+  padding: 5px;
+  display: block;
+  outline: 1px solid black;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.loginSubmit, .registerSubmit{
+  margin-top: 10px;
+  margin-left: 3px;
+  padding: 10px;
+  width: 200px;
+  background-color: white;
+  border: 4px solid black;
+  font-size: 1rem;
+  float: right;
+}
+
+.loginSubmit:hover, .registerSubmit:hover{
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+
+.form__head {
+  font-size: 5rem;
+}
+
+.upload_image {
+ text-decoration: none;
+ border: 1px solid black;
+ margin-top: 30px;
+ color: black;
+ padding: 10px 20px;
+ margin-left: 8px;
+ cursor: pointer;
+ text-align: right;
+ margin-right: 10px;
+ float: right;
+}
+
+.upload_image:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.footer {
+  /* outline: 1px solid red; */
+  /* background-color: lightskyblue; */
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.footer__copyright {
+  width: 100%;
+  font-size: 0.7rem;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.footer__address {
+  
+  /* outline: 1px solid red; */
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+.footer__address > a {
+  font-style: normal;
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+
+}
+
+.footer__hero > * {
+  margin-left: 20px;
+}
+
+.footer__hero {
+ /* outline: 1px solid red; */
+ display: flex;
+ width: 100%;
+ /* background-color: lightskyblue; */
+
+ flex-direction: column;
+}
+
+.footer__hero > span {
+  
+  font-size: 0.7rem;
+  width: 100%;
+  margin-left: 30px;
+}
+
+.footer__logo {
+  text-decoration: none;
+  color: black;
+  font-size: 10rem;
+  text-align: right;
+  position: relative;
+}
+
+.footer__reg {
+  position: absolute;
+  inset: 0;
+  top: 40px;
+  font-size: 1rem;
+}
+
+.footer__text  {
+   width: 180px;
+  font-size: 0.5rem;
+  /* text-align: right; */
+}
+
+.about {
+  padding: 30px;
+  /* outline: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 500px;
+}
+
+.about__project > h5, .about__team > h5 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.about__project > p, 
+.about__team > p {
+  font-size: 0.9rem;
+  width: 800px;
+  text-align: justify;
+}
+
+.draw__logo {
+  /* outline: 1px solid red; */
+  height: 200px;
+  width: 200px;
+  margin-left: 20px;
+}
+
+.stroke {
+  border-radius: 10px;
+  display: block;
+  width: 10px;
+  height: 70px;
+  background-color: black;
+  position: absolute;
+}
+
+.stroke--one {
+  margin-top: 45px;
+  margin-left: 80px;
+  background-color: red;
+  rotate: 60deg;
+}
+
+.stroke--two {
+  margin-left: 90px;
+  margin-top: 72px;
+  rotate: 90deg;
+  background-color: blue;
+}
+
+.stroke--three {
+  margin-left: 80px;
+  margin-top: 100px;
+  background-color: gold;
+  rotate: 120deg;
 }
