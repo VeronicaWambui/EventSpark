@@ -221,7 +221,7 @@
 .footer {
   /* outline: 1px solid red; */
   /* background-color: lightskyblue; */
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   width: 100vw;
   display: flex;
@@ -350,4 +350,41 @@
   margin-top: 100px;
   background-color: gold;
   rotate: 120deg;
+}
+
+.events {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.events__container {
+  /* outline: 1px solid red; */
+  height: max-content;
+  padding: 30px;
+}
+
+.event {
+  outline: 1px solid black;
+  margin-left: 30px;
+  width: 400px;
+  height: 200px;
+}
+
+.event:first-child {
+  flex-basis: 50%;
+  height: 500px;
+  width: 500px;
+}
+
+.search__bar {
+  outline: 2px solid grey;
+  width: 80%;
+  margin-left: 28px;
+  font-size: x-large;
+  padding: 0.2rem;
+  margin-bottom: 50px;
+}
+
+.search__bar::placeholder {
+  font-size: 0.7rem;
 }
