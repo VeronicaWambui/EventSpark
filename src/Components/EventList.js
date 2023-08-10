@@ -1,9 +1,9 @@
 import React from "react";
+import {QRCodeCanvas} from 'qrcode.react'
 
 export function EventList() {
   const [filter, filterSet] = React.useState("");
   const [event, eventSet] = React.useState(null);
-//   const [selectedEvent, selectedEventSet] = React.useState(null);
 
   React.useEffect(() => {
     fetch("https://eventspark-api-service.onrender.com/api/v1/event")
@@ -28,11 +28,13 @@ export function EventList() {
         {event.events
         .filter((event) => event.name.toLowerCase().includes(filter.toLowerCase()))
         // you can chain more methods here. ie. .slice()
-        .map((event) => (
-            <ul className="event" key={event.id}>
+        .map((event, onSelect) => (
+            
+            <ul className="event" key={event.event_id}>
                 <li>{event.name}</li>
-                <li>{event.event_id}</li>
                 <li>{event.description}</li>
+                <QRCodeCanvas  value={event.event_id}/>
+                 <li>{event.event_id}</li>
             </ul>
         ))}
     </div>

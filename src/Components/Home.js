@@ -1,7 +1,7 @@
 export function Home() {
     return<>
-    <article className="Hero">
-     
+    <article className="hero">
+            {/* <p>@todo</p> */}
     </article>
     </>
 }

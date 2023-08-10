@@ -102,6 +102,7 @@
   display: flex;
   flex-basis: 15%;
   justify-content: space-between;
+  align-items: center;
   list-style: none;
 }
 
@@ -354,20 +355,48 @@
 
 .events {
   display: flex;
+  gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .events__container {
   /* outline: 1px solid red; */
   height: max-content;
-  padding: 30px;
+
 }
 
 .event {
   outline: 1px solid black;
   margin-left: 30px;
-  width: 400px;
-  height: 200px;
+  width: 500px;
+  height: 400px;
+
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  padding: 20px;
+}
+
+
+.event > li:first-child {
+  flex-basis: 90%;
+  font-weight: bolder;
+  font-size: 7rem;
+  line-height: 0.8;
+  word-wrap: break-word;
+}
+
+.event > li:last-child {
+  font-size: small;
+
+}
+
+.ticket {
+  outline: 1px solid red;}
+
+.event > li {
+  list-style: none;
 }
 
 .event:first-child {
@@ -377,14 +406,23 @@
 }
 
 .search__bar {
-  outline: 2px solid grey;
+  outline: none;
+  border: 1px solid grey;
   width: 80%;
-  margin-left: 28px;
-  font-size: x-large;
-  padding: 0.2rem;
-  margin-bottom: 50px;
+  margin-left: 9.5%;
+  padding: 0.7rem;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 .search__bar::placeholder {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
+}
+
+.hero {
+  height: 500px;
+}
+
+.hero p {
+  margin-left: 20px;
 }
