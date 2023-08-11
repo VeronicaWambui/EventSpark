@@ -25,7 +25,8 @@ export function Header() {
     <nav className='navbar__menu'>
       <li className='navbar__link'><Link className='link' to="/events">Events</Link></li>
       <li className='navbar__link'><Link className='link' to="/about">About</Link></li>
-      <li className='navbar__link'><Link className='link link--login' to="/login">Login</Link></li> 
+      <li className='navbar__link'><Link className='link  link--org' to="/events/new">Organize an event.</Link> </li>
+      <li className='navbar__link'><Link  className='link link' to="/login">Login</Link></li> 
     </nav>
   </header>
 </>

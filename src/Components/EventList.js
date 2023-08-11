@@ -1,6 +1,10 @@
 import React from "react";
 import {QRCodeCanvas} from 'qrcode.react'
 
+function Loading() {
+    return <div className='load'></div>;
+}
+
 export function EventList() {
   const [filter, filterSet] = React.useState("");
   const [event, eventSet] = React.useState(null);
@@ -12,12 +16,13 @@ export function EventList() {
   }, []);
 
   if (!event) {
-    return <div>Loading data</div>;
+    return <Loading />
   }
 
   return (
     <div className="events__container">
     <div className="search">
+        <span>Search event</span>
         <input className="search__bar" placeholder="Search for an event"
         value={filter}
         onChange={(evt) => filterSet(evt.target.value)}
@@ -28,10 +33,9 @@ export function EventList() {
         {event.events
         .filter((event) => event.name.toLowerCase().includes(filter.toLowerCase()))
         // you can chain more methods here. ie. .slice()
-        .map((event, onSelect) => (
-            
-            <ul className="event" key={event.event_id}>
-                <li>{event.name}</li>
+        .map((event, i) => (
+            <ul className="event" key={i}>
+                <li key={i}>{event.name}</li>
                 <li>{event.description}</li>
                 <QRCodeCanvas  value={event.event_id}/>
                  <li>{event.event_id}</li>
@@ -39,6 +43,7 @@ export function EventList() {
         ))}
     </div>
    
+ 
     </div>
   );
 }
