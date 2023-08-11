@@ -1,5 +1,4 @@
-
-
+import {Link } from 'react-router-dom'
 import React from "react";
 import {QRCodeCanvas} from 'qrcode.react'
 
@@ -28,7 +27,8 @@ export function Home() {
     return<>
         <div className='hero'>
             <section className="hero__text">
-             
+                <p>Ignite social mobility</p>
+                <Link className='hero__link' to="/events">Explore events</Link>
             </section>
             <article className="hero__slider">
                
@@ -37,7 +37,7 @@ export function Home() {
                 <span>Featured events</span>
                 <div className="events events--featured">
                     {event.events
-                    .slice(0,5)
+                    .slice(0,3)
                     .map((event, i) => (
                         <ul className="event" key={i}>
                             <li key={i}>{event.name}</li>

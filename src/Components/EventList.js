@@ -22,7 +22,7 @@ export function EventList() {
   return (
     <div className="events__container">
     <div className="search">
-        <span>Search event</span>
+        <span>Search</span>
         <input className="search__bar" placeholder="Search for an event"
         value={filter}
         onChange={(evt) => filterSet(evt.target.value)}
@@ -38,7 +38,7 @@ export function EventList() {
                 <li key={i}>{event.name}</li>
                 <li>{event.description}</li>
                 <QRCodeCanvas  value={event.event_id}/>
-                 <li>{event.event_id}</li>
+                <li>{event.event_id}</li>
             </ul>
         ))}
     </div>

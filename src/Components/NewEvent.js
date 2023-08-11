@@ -1,16 +1,51 @@
-import {Link } from 'react-router-dom'
+import { useState } from 'react'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+
+
 
 export function NewEvent() {
-    return <form className="eventForm" id="eventForm" action="api_url_here" method="post">
+    const navigate = useNavigate()
+    const [data, dataSet] = useState({
+        name: "",
+        description: ""
+    })
+
+    function submit(e) {
+        e.preventDefault()
+        axios.post('https://eventspark-api-service.onrender.com/api/v1/event',
+                {   name: data.name,
+                    description: data.description
+                }
+        )
+        .then(function(response) {
+            if(response.status === 200){
+                navigate('/events')
+            }
+        })
+        .catch(function(error) {
+           console.log(error)
+        })
+        
+    }
+
+    function handlePublish(e) {
+        const newData = {...data}
+        newData[e.target.id]  = e.target.value
+        dataSet(newData)
+    }
+
+
+    return <form onSubmit={(e) => submit(e)} className="eventForm" id="eventForm"  method="post">
         <div className="form__head">Publish Event</div>
         <fieldset id="fieldsetEvent">
-            <legend>Please Register an accoount with us.</legend>
-                Event Title
-                <input className="eventtitle" name="eventtitle" id="title" type="text" />
+                <legend>Publish an event.</legend>
+                Event Name
+                <input onChange={(e) => { handlePublish(e) }} value={data.name} className="eventtitle" name="name" id="name" type="text" required />
                 Description
-                <input className="description" name="description" id="description" type="text" />             
+                <textarea onChange={(e) => { handlePublish(e) }} value={data.description} className="description" name="description" id="description" type="text" required />            
         </fieldset>
-        <Link className='upload_image' to="/upload">Next</Link>
+        <button className='event_submit'>Publish</button> 
     </form>
 
 }
